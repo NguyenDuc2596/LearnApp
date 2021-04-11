@@ -1,0 +1,51 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+
+{
+    "username":"jack22aaa",
+    "password":"jack"
+}
+
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"jack",
+    "password":"jack"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZjM2ZiMjkwOTI0MTI4NDRkYWVhYjIiLCJpYXQiOjE2MTgxMDI0OTZ9.Ms1nsMljOdm1VmdyYqVsFNrPWEBGWt4_uv5ZXKwbQBs
+Content-Type: application/json
+
+{
+    "title" : "my first learn!",
+    "description" :"React",
+    "url":"React.com",
+    
+}
+
+###
+GET  http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZjM2ZiMjkwOTI0MTI4NDRkYWVhYjIiLCJpYXQiOjE2MTgxMDI0OTZ9.Ms1nsMljOdm1VmdyYqVsFNrPWEBGWt4_uv5ZXKwbQBs
+
+###
+PUT http://localhost:5000/api/posts/606c17c970141c043c5ffaa8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZjM2ZiMjkwOTI0MTI4NDRkYWVhYjIiLCJpYXQiOjE2MTgxMDI0OTZ9.Ms1nsMljOdm1VmdyYqVsFNrPWEBGWt4_uv5ZXKwbQBs
+
+{
+    "title" :"Vue",
+    "description" : "VUEEEEEEEEEEEEE",
+    "url":"google.com",
+    "status":"LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/606c17c970141c043c5ffaa8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZjM2ZiMjkwOTI0MTI4NDRkYWVhYjIiLCJpYXQiOjE2MTgxMDI0OTZ9.Ms1nsMljOdm1VmdyYqVsFNrPWEBGWt4_uv5ZXKwbQBs
